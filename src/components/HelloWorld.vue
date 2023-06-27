@@ -1,7 +1,7 @@
 <template>
   <v-container class="fill-height">
     <v-responsive class="align-center text-center fill-height">
-      <v-img height="300" src="@/assets/logo.svg" />
+      <v-img height="300" src="https://img-cdn.magiceden.dev/rs:fill:400:400:0:0/plain/https://bafkreibiwtot3jc7cssl7bs6z6bj253vcyfh4qh3u3kpibpi5bmmnja4se.ipfs.nftstorage.link/" />
 
       <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
 
