@@ -22,7 +22,7 @@ export default defineConfig({
   ],
   base: './',
   build: {
-    outDir: 'dist',
+    outDir: 'docs/',
   },
   define: { 'process.env': {} },
   resolve: {
