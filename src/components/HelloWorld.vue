@@ -12,26 +12,25 @@
       <v-row class="d-flex align-center justify-center">
         <v-col cols="auto">
           <v-btn
-            href="https://vuetifyjs.com/components/all/"
+            href="https://twitter.com/Recursive_Frog"
             min-width="164"
             rel="noopener noreferrer"
             target="_blank"
             variant="text"
           >
             <v-icon
-              icon="mdi-view-dashboard"
+              icon="mdi-twitter"
               size="large"
               start
             />
-
-            Components
+            Twitter
           </v-btn>
         </v-col>
 
         <v-col cols="auto">
           <v-btn
             color="primary"
-            href="https://vuetifyjs.com/introduction/why-vuetify/#feature-guides"
+            href="https://magiceden.io/ordinals/marketplace/recursivefrogs"
             min-width="228"
             rel="noopener noreferrer"
             size="x-large"
@@ -39,30 +38,28 @@
             variant="flat"
           >
             <v-icon
-              icon="mdi-speedometer"
+              icon="mdi-stack-exchange"
               size="large"
               start
             />
-
-            Get Started
+            Recursive Frog for ME
           </v-btn>
         </v-col>
 
         <v-col cols="auto">
           <v-btn
-            href="https://community.vuetifyjs.com/"
+            href="https://gamma.io/ordinals/collections/recursive-frogs"
             min-width="164"
             rel="noopener noreferrer"
             target="_blank"
             variant="text"
           >
             <v-icon
-              icon="mdi-account-group"
+              icon="mdi-shopping"
               size="large"
               start
             />
-
-            Community
+            Recursive Frog for Gamma
           </v-btn>
         </v-col>
       </v-row>
