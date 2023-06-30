@@ -23,6 +23,7 @@ export default defineConfig({
   base: './',
   build: {
     outDir: 'docs/',
+    target: 'chrome87'
   },
   define: { 'process.env': {} },
   resolve: {
