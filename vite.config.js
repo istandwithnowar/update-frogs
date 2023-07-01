@@ -20,7 +20,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: './',
+  base: '/docs/',
   build: {
     outDir: 'docs/',
     target: 'chrome87'
