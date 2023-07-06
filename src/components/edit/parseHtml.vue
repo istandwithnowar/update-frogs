@@ -13,9 +13,6 @@
             <v-card-title v-if="editHtml">
                 You can continue editing
             </v-card-title>
-            <v-card-title v-if="!editHtml">
-                Please enter the original HTML
-            </v-card-title>
             <v-card-text v-if="!editHtml">
                 Recursive frogs InscriptionNo: 
                 <v-text-field label="InscriptionNo" v-model="inscription" variant="underlined"></v-text-field>
