@@ -37,6 +37,7 @@
 <script>
 import * as cheerio from 'cheerio';
 import { useAppStore } from '@/store/app';
+import { events } from '@/bus'
 //   const store = useAppStore()
   export default {
       name: 'ParseHtml',
@@ -98,6 +99,7 @@ import { useAppStore } from '@/store/app';
             if(s) {
                 const { tokenId, inscriptionNo } = s
                 this.appStore.setHtmlCode(this.htmlCode, tokenId, inscriptionNo)
+                events.emit('reCheck', tokenId)
                 this.dialog = false
             }
         }

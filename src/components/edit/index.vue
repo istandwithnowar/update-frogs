@@ -6,6 +6,7 @@
 import ParseHtml from '@/components/edit/parseHtml.vue'
 import PreviewHtml from '@/components/edit/previewHtml.vue'
 import { useAppStore } from '@/store/app';
+import { events } from '@/bus'
 
 export default {
     name: 'EditPage',
@@ -28,6 +29,12 @@ export default {
         return {
             page: 'ParseHtml',
         }
+    },
+    mounted(){
+        events.on('reCheck', () => {
+            this.check()
+            location.reload()
+        })
     },
     methods: {
         check(){

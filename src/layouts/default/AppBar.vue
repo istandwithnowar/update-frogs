@@ -5,6 +5,7 @@
       Recursive frogs update tools
     </v-app-bar-title>
     <template v-slot:append>
+        <v-btn @click="clear">Clean Data</v-btn>
         <v-switch style="margin-top: 20px;" :label="store.theme" v-model="themeName" true-value="dark" false-value="light" @update:indeterminate="changeValue"></v-switch>
         <v-btn prepend-icon="mdi-twitter" target="_blank" :href="twitterUrl">Twitter</v-btn>
     </template>
@@ -14,6 +15,9 @@
 <script setup>
   import { ref, watch } from 'vue'
   import { useTheme } from 'vuetify'
+  import { events } from '@/bus';
+
+
 
   // import { storeToRefs } from 'pinia'
   import { useAppStore } from '@/store/app';
@@ -42,6 +46,11 @@
   const changeValue = (key) => {
     console.log('key: ', key)
     // toggleTheme()
+  }
+  const clear = () => {
+    store.setHtmlCode('', '', '')
+    events.emit('reCheck', {})
+    location.reload()
   }
 
 </script>

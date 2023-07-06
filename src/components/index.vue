@@ -51,7 +51,7 @@
 <script>
 import ComList  from './ComList'
 import Editor  from './edit/index.vue'
-import { events } from '../bus'
+import { events } from '@/bus'
 
 export default {
   components: {
