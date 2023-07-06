@@ -1,7 +1,7 @@
 <template>
-  <HelloWorld />
+  <HomeIndex />
 </template>
 
 <script setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+  import HomeIndex from '@/components/index.vue'
 </script>

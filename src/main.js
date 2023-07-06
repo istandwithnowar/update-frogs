@@ -15,6 +15,8 @@ import { registerPlugins } from '@/plugins'
 
 const app = createApp(App)
 
+app.config.devtools = true
+
 registerPlugins(app)
 
 app.mount('#app')
