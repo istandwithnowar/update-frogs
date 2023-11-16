@@ -85,7 +85,7 @@ export default {
             var html = this.htmlCode + '';
             html= html.replace('https://Ordinals.com', 'https://ordiscan.com')
             html= html.replace(/\/content\//g, 'https://ordiscan.com/content/')
-            console.log('html: ', html)
+            // console.log('html: ', html)
             // 将HTML文本作为Blob对象创建URL
             const blob = new Blob([html], { type: 'text/html' });
             return URL.createObjectURL(blob);
@@ -104,7 +104,7 @@ export default {
     methods: {
         updatePreview() {
         // 更新预览URL
-            console.log('this.previewSrc: ', this.previewSrc)
+            // console.log('this.previewSrc: ', this.previewSrc)
             this.previewUrl = this.previewSrc;
         },
         updateHtmlCode({category, component, index }){

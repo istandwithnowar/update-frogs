@@ -1,6 +1,6 @@
 <template>
     <div class="parseHtml">
-        <v-dialog
+    <v-dialog
         v-model="dialog"
         transition="dialog-bottom-transition"
         persistent

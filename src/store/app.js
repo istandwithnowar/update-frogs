@@ -12,8 +12,14 @@ export const useAppStore = defineStore('app', {
     nftInfo: {
       tokenId: nftInfo && nftInfo.tokenId?nftInfo.tokenId:'', 
       inscriptionNo: nftInfo && nftInfo.inscriptionNo?nftInfo.inscriptionNo:''
-    }
+    },
+    updateData: null
   }),
+  getters: {
+    updateData: () => {
+      return this.updateData ? JSON.parse(this.updateData) : null
+    },
+  },
   actions: {
     setTheme(themeName){
       this.theme = themeName
@@ -22,6 +28,9 @@ export const useAppStore = defineStore('app', {
       this.htmlCode = htmlCode
       localStorage.setItem('_htmlCode', htmlCode)
       localStorage.setItem('_nftInfo', JSON.stringify({tokenId, inscriptionNo}))
+    },
+    setUpdateData(updateData){
+      this.updateData = JSON.stringify(updateData)
     }
   }
 })

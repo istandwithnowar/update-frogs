@@ -1,10 +1,12 @@
 <template>
   <component :is="page"></component>
+  <UpdateTxt v-show="editUpdateTxt"></UpdateTxt>
 </template>
 
 <script>
 import ParseHtml from '@/components/edit/parseHtml.vue'
 import PreviewHtml from '@/components/edit/previewHtml.vue'
+import UpdateTxt from '@/components/edit/updateTxt.vue'
 import { useAppStore } from '@/store/app';
 import { events } from '@/bus'
 
@@ -15,7 +17,7 @@ export default {
         return { appStore }
     },
     components: {
-        ParseHtml, PreviewHtml
+        ParseHtml, PreviewHtml, UpdateTxt
     },
     watch: {
         'appStore.nftInfo.tokenId': function() {
@@ -28,6 +30,7 @@ export default {
     data() {
         return {
             page: 'ParseHtml',
+            editUpdateTxt: false,
         }
     },
     mounted(){
@@ -35,6 +38,10 @@ export default {
             this.check()
             location.reload()
         })
+        events.on('editUpdateTxt', () => {
+            this.editUpdateTxt = !this.editUpdateTxt 
+        })
+        
     },
     methods: {
         check(){

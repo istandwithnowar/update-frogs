@@ -5,6 +5,7 @@
       Recursive frogs update tools
     </v-app-bar-title>
     <template v-slot:append>
+        <v-btn @click="editUpdateTxt">Edit update.txt</v-btn>
         <v-btn @click="clear">Clean Data</v-btn>
         <v-switch style="margin-top: 20px;" :label="store.theme" v-model="themeName" true-value="dark" false-value="light" @update:indeterminate="changeValue"></v-switch>
         <v-btn prepend-icon="mdi-twitter" target="_blank" :href="twitterUrl">Twitter</v-btn>
@@ -51,6 +52,9 @@
     store.setHtmlCode('', '', '')
     events.emit('reCheck', {})
     location.reload()
+  }
+  const editUpdateTxt = () => {
+    events.emit('editUpdateTxt', {})
   }
 
 </script>
